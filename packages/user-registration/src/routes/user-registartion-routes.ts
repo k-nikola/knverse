@@ -13,6 +13,10 @@ export function userRegistrationRoutes(app: Express) {
     createUserHandler
   )
   app.get('/api/health', (req: Request, res: Response) => {
-    res.status(200).send({ health: 'OK', version: userRegistrationConfig.ver })
+    res
+      .status(200)
+      .send({
+        userRegistration: { health: 'OK', version: userRegistrationConfig.ver },
+      })
   })
 }
