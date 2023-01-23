@@ -11,7 +11,7 @@
     "@types/bcrypt": "^5.0.0",
     "@types/express": "^4.17.15",
     "@types/fs-extra": "^11.0.1",
-    "lerna": "^6.0.1"
+    "lerna": "^6.4.1"
   },
   "dependencies": {
     "@knverse/db": "file:packages/db",
