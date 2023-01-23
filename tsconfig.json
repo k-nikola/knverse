@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "baseUrl": "./packages",
+    "paths": {
+      "@knverse/shared": ["packages/shared/src"],
+      "@knverse/user-registration": ["packages/user-registration/src"],
+      "@knverse/user-login": ["packages/user-login/src"],
+      "@knverse/db": ["packages/db/src"]
+    }
+  }
+}
