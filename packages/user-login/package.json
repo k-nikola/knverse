@@ -1,0 +1,39 @@
+{
+  "name": "@knverse/user-login",
+  "version": "0.0.4-alpha.0",
+  "description": "User login service for knverse app.",
+  "keywords": [
+    "login",
+    "sign-in"
+  ],
+  "author": "k-nikola <nikola.kurbalija@hotmail.com>",
+  "homepage": "https://github.com/k-nikola/knverse#readme",
+  "license": "ISC",
+  "main": "src/app.ts",
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k-nikola/knverse.git"
+  },
+  "publishConfig": {
+    "registry": "https://knverse.jfrog.io/artifactory/api/npm/knverse/"
+  },
+  "scripts": {
+    "test": "node ./__tests__/user-login.test.js",
+    "build": "tsc",
+    "start": "node dist/app.js"
+  },
+  "bugs": {
+    "url": "https://github.com/k-nikola/knverse/issues"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^6.8.0"
+  }
+}
