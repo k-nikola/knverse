@@ -1,6 +1,6 @@
 {
   "name": "@knverse/db",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.0",
   "description": "> TODO: description",
   "keywords": [
     "db",
@@ -29,7 +29,7 @@
     "url": "https://github.com/k-nikola/knverse/issues"
   },
   "dependencies": {
-    "@knverse/shared": "^0.0.0",
+    "@knverse/shared": "^0.0.1-alpha.0",
     "mongoose": "^6.8.4"
   }
 }
