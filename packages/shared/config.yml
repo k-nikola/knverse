@@ -1,0 +1,10 @@
+---
+services:
+  userRegistration:
+    port: 3000
+    ver: 0.0.0
+  userLogin:
+    port: 3000
+    ver: 0.0.0
+db:
+  uri: mongodb://localhost:27017/knverse

@@ -1,0 +1,43 @@
+{
+  "name": "@knverse/shared",
+  "version": "0.0.1-alpha.4",
+  "description": "Shared utils package for knverse project.",
+  "keywords": [
+    "shared",
+    "util",
+    "config"
+  ],
+  "author": "k-nikola <nikola.kurbalija@hotmail.com>",
+  "homepage": "https://github.com/k-nikola/knverse#readme",
+  "license": "ISC",
+  "main": "dist/index",
+  "type": "commonjs",
+  "files": [
+    "dist/*",
+    "config.yml"
+  ],
+  "publishConfig": {
+    "registry": "https://knverse.jfrog.io/artifactory/api/npm/knverse/"
+  },
+  "scripts": {
+    "test": "node ./__tests__/user-login.test.js",
+    "compile": "tsc",
+    "clean": "rimraf -rf ./dist ./*.tsbuildinfo",
+    "build": "npm run clean && npm run compile",
+    "prepublishOnly": "npm run build"
+  },
+  "bugs": {
+    "url": "https://github.com/k-nikola/knverse/issues"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^11.1.0",
+    "js-yaml": "^4.1.0",
+    "mongoose": "^6.8.4"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.5"
+  },
+  "gitHead": "e98ac8ab1b6cd90c4944908f79bd01270b807d1b"
+}
