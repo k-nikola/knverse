@@ -1,11 +1,8 @@
 # `user-registration`
 
-> TODO: description
+> User registration service for knverse app
 
 ## Usage
 
-```
-const userRegistration = require('user-registration');
-
-// TODO: DEMONSTRATE API
-```
+Example request to create new user:
+![example post](https://i.imgur.com/5b5LwCg.jpg)

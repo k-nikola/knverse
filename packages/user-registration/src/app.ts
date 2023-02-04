@@ -8,7 +8,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 const userRegistrationConfig = config.services.userRegistration
-const dbUri = config.db.uri
+const dbUri = process.env.DB_URI || config.db.uri
 
 app.listen(userRegistrationConfig.port, () => {
   console.log(
