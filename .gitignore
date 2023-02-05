@@ -5,3 +5,5 @@ dist/
 .idea
 *.tsbuildinfo
 *.d.ts
+package-lock.json
+.env

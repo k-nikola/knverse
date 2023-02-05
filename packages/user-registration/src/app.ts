@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: false }))
 const userRegistrationConfig = config.services.userRegistration
 const dbUri = process.env.DB_URI || config.db.uri
 
-app.listen(userRegistrationConfig.port, () => {
+app.listen(userRegistrationConfig.port || process.env.APP_PORT, () => {
   log.info(
     `⚡️Launching user registration service version ${userRegistrationConfig.ver}`
   )
