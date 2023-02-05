@@ -1,6 +1,6 @@
 {
   "name": "@knverse/user-login",
-  "version": "0.0.0-alpha.2",
+  "version": "0.0.0-alpha.3",
   "description": "User login service for knverse app.",
   "keywords": [
     "login",
