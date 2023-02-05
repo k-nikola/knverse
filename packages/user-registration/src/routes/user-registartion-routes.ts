@@ -1,5 +1,5 @@
-import { Express, request, Request, response, Response } from 'express'
-import { config } from '@knverse/shared'
+import { Express, Request, Response } from 'express'
+import { config, log } from '@knverse/shared'
 import { createUserSchema } from '../schemas/user-registration-schema'
 import { validateRegistrationRequest } from '../validators/validate-registration-request'
 import { createUserHandler } from '../controllers/user-registration-controller'
@@ -12,11 +12,10 @@ export function userRegistrationRoutes(app: Express) {
     validateRegistrationRequest(createUserSchema),
     createUserHandler
   )
-  app.get('/api/health', (req: Request, res: Response) => {
-    res
-      .status(200)
-      .send({
-        userRegistration: { health: 'OK', version: userRegistrationConfig.ver },
-      })
+  app.get('/api/status', (req: Request, res: Response) => {
+    log.info(`⚡️${req.method} ${req.url} source ${req.ip}(${req.hostname})`)
+    res.status(200).send({
+      userRegistration: { health: 'OK', version: userRegistrationConfig.ver },
+    })
   })
 }

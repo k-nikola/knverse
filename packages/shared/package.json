@@ -31,10 +31,13 @@
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
+    "dayjs": "^1.11.7",
     "fs": "^0.0.1-security",
     "fs-extra": "^11.1.0",
     "js-yaml": "^4.1.0",
-    "mongoose": "^6.8.4"
+    "mongoose": "^6.8.4",
+    "pino": "^8.8.0",
+    "pino-pretty": "^9.1.1"
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.5"

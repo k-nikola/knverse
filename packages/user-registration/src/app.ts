@@ -1,5 +1,5 @@
 import express, { Express } from 'express'
-import { config } from '@knverse/shared'
+import { config, log } from '@knverse/shared'
 import { userRegistrationRoutes } from './routes/user-registartion-routes'
 import { connectToDb } from '@knverse/db'
 
@@ -11,11 +11,11 @@ const userRegistrationConfig = config.services.userRegistration
 const dbUri = process.env.DB_URI || config.db.uri
 
 app.listen(userRegistrationConfig.port, () => {
-  console.log(
-    `⚡️[server]: Launching user registration service version ${userRegistrationConfig.ver}`
+  log.info(
+    `⚡️Launching user registration service version ${userRegistrationConfig.ver}`
   )
-  console.log(
-    `⚡️[server]: Server listening at http://localhost:${userRegistrationConfig.port}`
+  log.info(
+    `⚡️Server listening at http://localhost:${userRegistrationConfig.port}`
   )
   connectToDb(dbUri)
 })
