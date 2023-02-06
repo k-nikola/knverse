@@ -4,7 +4,9 @@ import { log } from '@knverse/shared'
 export async function connectToDb(dbUri: string) {
   log.info('⚡️Trying to establish DB connection...')
   return mongoose
-    .connect(dbUri)
+    .connect(dbUri, {
+      authSource: 'admin',
+    })
     .then(() => {
       log.info('⚡️Database connection established ✅')
     })
