@@ -5,9 +5,6 @@ ARG NPM_TOKEN
 
 USER node
 
-RUN echo "//knverse.jfrog.io/artifactory/api/npm/knverse/:_authToken=$NPM_TOKEN" > ~/.npmrc \
-    && echo "@knverse:registry=https://knverse.jfrog.io/artifactory/api/npm/knverse/" >> ~/.npmrc
-
 WORKDIR /usr/src/app
 
 COPY --chown=node:node . .

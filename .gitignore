@@ -3,7 +3,8 @@ lerna-debug.log
 npm-debug.log
 dist/
 .idea
-*.tsbuildinfo
 *.d.ts
 package-lock.json
+**/*.tsbuildinfo
 .env
+.nx/

@@ -1,8 +1,9 @@
 {
   "name": "@knverse/root",
-  "private": true,
+  "private": false,
   "publishConfig": {
-    "registry": "https://knverse.jfrog.io/artifactory/api/npm/knverse/"
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
   },
   "workspaces": [
     "packages/*"

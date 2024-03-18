@@ -10,8 +10,8 @@ export const log = pino(
   },
   pino.multistream([
     { stream: process.stdout },
-    // {
-    //   stream: pino.destination('/var/log/knverse/user-registration/stdout.log'),
-    // },
+    {
+      stream: pino.destination('/var/log/knverse/user-registration/stdout.log'),
+    },
   ])
 )
