@@ -1,6 +1,6 @@
 {
   "name": "@knverse/user-registration",
-  "version": "0.0.1-alpha.10",
+  "version": "0.0.2-alpha.0",
   "description": "User registration service for knverse app.",
   "keywords": [
     "registration",
@@ -30,8 +30,8 @@
     "url": "https://github.com/k-nikola/knverse/issues"
   },
   "dependencies": {
-    "@knverse/db": "^0.0.1-alpha.7",
-    "@knverse/shared": "^0.0.1-alpha.6",
+    "@knverse/db": "^0.0.2-alpha.0",
+    "@knverse/shared": "^0.0.2-alpha.0",
     "express": "^4.18.2",
     "lodash": "^4.17.21",
     "mongoose": "^6.8.0",
