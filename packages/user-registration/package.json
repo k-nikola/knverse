@@ -32,17 +32,17 @@
   "dependencies": {
     "@knverse/db": "^0.0.2-alpha.0",
     "@knverse/shared": "^0.0.2-alpha.0",
-    "express": "^4.18.2",
+    "express": "^4.18.3",
     "lodash": "^4.17.21",
-    "mongoose": "^6.8.0",
-    "ts-node": "^10.9.1",
+    "mongoose": "^6.12.7",
+    "ts-node": "^10.9.2",
     "yup": "^0.32.11"
   },
   "devDependencies": {
-    "@types/express": "^4.17.15",
-    "@types/lodash": "^4.14.191",
+    "@types/express": "^4.17.21",
+    "@types/lodash": "^4.17.0",
     "concurrently": "^7.6.0",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.22"
   },
   "gitHead": "e98ac8ab1b6cd90c4944908f79bd01270b807d1b"
 }

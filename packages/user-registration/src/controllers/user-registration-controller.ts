@@ -10,7 +10,7 @@ export async function createUserHandler(req: Request, res: Response) {
     return res.send(omit(user.toJSON(), 'password'))
   } catch (err) {
     return res.status(409).send({
-      err: `Could not create user from data. ${err}`,
+      err: `⭕ Could not create user from data. ${err}`,
       data: req.body,
     })
   }

@@ -1,10 +1,8 @@
 import { Express, Request, Response } from 'express'
-import { config, log } from '@knverse/shared'
+import { log } from '@knverse/shared'
 import { createUserSchema } from '../schemas/user-registration-schema'
 import { validateRegistrationRequest } from '../validators/validate-registration-request'
 import { createUserHandler } from '../controllers/user-registration-controller'
-
-const userRegistrationConfig = config.services.userRegistration
 
 export function userRegistrationRoutes(app: Express) {
   app.post(
@@ -13,9 +11,12 @@ export function userRegistrationRoutes(app: Express) {
     createUserHandler
   )
   app.get('/api/status', (req: Request, res: Response) => {
-    log.info(`⚡️${req.method} ${req.url} source ${req.ip}(${req.hostname})`)
+    log.info(`⚡️ ${req.method} ${req.url} source ${req.ip}(${req.hostname})`)
     res.status(200).send({
-      userRegistration: { health: 'OK', version: userRegistrationConfig.ver },
+      userRegistration: {
+        health: 'OK',
+        version: process.env.npm_package_version,
+      },
     })
   })
 }

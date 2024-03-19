@@ -21,7 +21,7 @@ services:
       ME_CONFIG_MONGODB_URL: mongodb://mongo:27017/
 
   user-registration:
-    image: t0b9/user-registration:0.0.1
+    image: t0b9/user-registration:0.0.2
     restart: always
     ports:
       - 3000:3000

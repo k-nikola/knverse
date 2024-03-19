@@ -1,7 +1,5 @@
 # Build stage
-FROM node:19.4.0 as build
-
-ARG NPM_TOKEN
+FROM node:21.7.1 as build
 
 USER node
 
@@ -12,7 +10,7 @@ COPY --chown=node:node . .
 RUN npm i
 
 # Run stage
-FROM node:19.4.0-alpine3.16
+FROM node:21.7.1-alpine3.18
 
 WORKDIR /usr/src/app
 
@@ -22,4 +20,4 @@ COPY --from=build /usr/src/app /usr/src/app
 
 EXPOSE 3000
 
-CMD ["node", "dist/app.js"]
+CMD npm run start

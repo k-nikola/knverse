@@ -12,10 +12,10 @@ const dbUri = process.env.DB_URI || config.db.uri
 
 app.listen(userRegistrationConfig.port || process.env.APP_PORT, () => {
   log.info(
-    `⚡️Launching user registration service version ${userRegistrationConfig.ver}`
+    `⚡️ Launching user registration service version ${process.env.npm_package_version}`
   )
   log.info(
-    `⚡️Server listening at http://localhost:${userRegistrationConfig.port}`
+    `⚡️ Server listening at http://localhost:${userRegistrationConfig.port}`
   )
   connectToDb(dbUri)
 })
