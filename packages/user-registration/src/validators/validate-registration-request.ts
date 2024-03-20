@@ -1,5 +1,6 @@
 import { AnySchema } from 'yup'
 import { Request, Response, NextFunction } from 'express'
+import { log } from '@knverse/shared'
 
 export const validateRegistrationRequest =
   (schema: AnySchema) =>
@@ -12,6 +13,7 @@ export const validateRegistrationRequest =
       })
       return next()
     } catch (err) {
+      log.error(`⭕ Unable validate registration request.`, err)
       return res.status(409).send(err)
     }
   }

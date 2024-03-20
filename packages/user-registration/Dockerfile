@@ -1,5 +1,9 @@
-# Build stage
-FROM node:21.7.1 as build
+FROM node:21.7.1-alpine3.18
+
+RUN mkdir -p /var/log/knverse/user-registration && \
+    touch /var/log/knverse/user-registration/stdout.log
+
+RUN chown -R node:node /var/log/knverse
 
 USER node
 
@@ -8,15 +12,6 @@ WORKDIR /usr/src/app
 COPY --chown=node:node . .
 
 RUN npm i
-
-# Run stage
-FROM node:21.7.1-alpine3.18
-
-WORKDIR /usr/src/app
-
-USER node
-
-COPY --from=build /usr/src/app /usr/src/app
 
 EXPOSE 3000
 
