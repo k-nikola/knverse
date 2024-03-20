@@ -4,6 +4,6 @@ npm-debug.log
 dist/
 .idea
 *.d.ts
-**/*.tsbuildinfo
+**/**/tsconfig.tsbuildinfo
 .env
 .nx/

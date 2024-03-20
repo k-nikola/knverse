@@ -24,6 +24,7 @@
     "fs": "^0.0.1-security",
     "fs-extra": "^11.2.0",
     "pino": "^8.19.0",
+    "pino-multi-stream": "^6.0.0",
     "pino-pretty": "^9.4.1",
     "typescript": "^4.9.5"
   }
