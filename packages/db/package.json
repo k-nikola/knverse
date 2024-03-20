@@ -1,6 +1,6 @@
 {
   "name": "@knverse/db",
-  "version": "0.0.2-alpha.4",
+  "version": "0.0.2-alpha.5",
   "description": "Database connection module for knverse app.",
   "keywords": [
     "db",
@@ -29,7 +29,7 @@
     "url": "https://github.com/k-nikola/knverse/issues"
   },
   "dependencies": {
-    "@knverse/shared": "^0.0.2-alpha.4",
+    "@knverse/shared": "^0.0.2-alpha.5",
     "mongoose": "^6.12.7"
   },
   "gitHead": "e98ac8ab1b6cd90c4944908f79bd01270b807d1b"
